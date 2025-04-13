@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Answering WebUI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #question-form {
+        display: flex;
+        flex-direction: column;
+      }
+      input,
+      textarea {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #response-container {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ask a Question</h1>
+    <form id="question-form">
+      <input type="text" id="ip-address" placeholder="Enter IP Address" />
+      <input type="text" id="model-name" placeholder="Enter Model Name" />
+      <textarea
+        rows="4"
+        cols="50"
+        placeholder="Enter your question here"
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="response-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
