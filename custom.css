@@ -1,11 +1,25 @@
 html {
-  background: #7a6c60;
+  background: #0c0c0c;
   color: aliceblue;
+  font-size: 16px;
+}
+
+main {
+  font-size: 0.875rem;
+}
+
+code {
+  font-size: 0.875rem;
+  background: rgb(47, 20, 82);
 }
 
 pre {
   background: #1e1e1e;
   border: 1px solid black;
+  font-size: 0.875rem;
+  padding: 15px;
+  border-radius: 15px;
+  overflow: auto;
 }
 
 body {
