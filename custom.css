@@ -1,3 +1,13 @@
+html {
+  background: #7a6c60;
+  color: aliceblue;
+}
+
+pre {
+  background: #1e1e1e;
+  border: 1px solid black;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;

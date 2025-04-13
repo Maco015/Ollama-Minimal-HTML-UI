@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question Answering WebUI</title>
+    <title>Ollama HTML UI</title>
     <link href="./custom.css" rel="stylesheet" />
   </head>
   <body>
@@ -20,11 +20,13 @@
       <button type="submit">Submit</button>
     </form>
 
-    <pre id="response-container"></pre>
+    <main id="response-container"></main>
     <div id="error-container"></div>
     <!-- Load required 3rd-party scripts -->
-    <script src="./external/dompurify.js"></script>
-    <script src="./external/marked.min.js"></script>
+    <script src="./external/markdown-it.js"></script>
+    <script src="./external/highlight/highlight.min.js"></script>
+    <!-- <link href="./external/highlight/highlight.min.css" rel="stylesheet" /> -->
+    <link href="./external/highlight/theme.css" rel="stylesheet" />
 
     <!-- Load application scripts -->
     <script src="./main.js"></script>
