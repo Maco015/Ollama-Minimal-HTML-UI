@@ -13,6 +13,11 @@ document
     errorContainer.innerText = null;
     submitButton.disabled = true;
 
+    // The true, unmodified response from the AI
+    let answer = "";
+
+    window.addQuestion(prompt);
+
     try {
       // Simulate a network request to an external API
       const res = await fetch(`${ipAddress}/api/generate`, {
@@ -24,7 +29,6 @@ document
       if (!res.ok) throw new Error("Network response was not ok");
 
       const reader = res.body.getReader();
-      let answer = "";
 
       while (true) {
         const { done, value } = await reader.read();
@@ -47,5 +51,7 @@ document
       errorContainer.innerText = "Error while generating: " + error?.message;
     } finally {
       submitButton.disabled = false;
+      responseContainer.innerHTML = null;
+      window.addResponse(answer);
     }
   });
