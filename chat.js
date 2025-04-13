@@ -6,7 +6,7 @@ document
     const ipAddress = document.getElementById("ip-address").value;
     const modelName = document.getElementById("model-name").value;
     const prompt = document.querySelector("#question-form textarea").value;
-    const responseContainer = document.getElementById("response-container");
+    const responseContainer = document.getElementById("current-response");
     const errorContainer = document.getElementById("error-container");
     const submitButton = document.getElementById("submit-button");
 

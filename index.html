@@ -8,28 +8,33 @@
   </head>
   <body>
     <h1>Ask a Question</h1>
-    <form id="question-form">
-      <input type="text" id="ip-address" placeholder="Enter IP Address" />
-      <input type="text" id="model-name" placeholder="Enter Model Name" />
-      <textarea
-        rows="4"
-        cols="50"
-        placeholder="Enter your question here"
-        id="user-chat"
-      ></textarea>
-      <button type="submit" id="submit-button">Submit</button>
-    </form>
+    <main>
+      <form id="question-form">
+        <input type="text" id="ip-address" placeholder="Enter IP Address" />
+        <input type="text" id="model-name" placeholder="Enter Model Name" />
+        <textarea
+          rows="4"
+          cols="50"
+          placeholder="Enter your question here"
+          id="user-chat"
+        ></textarea>
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+      <div id="history"></div>
+      <div id="current-response"></div>
 
-    <main id="response-container"></main>
-    <div id="error-container"></div>
+      <div id="error-container"></div>
+    </main>
+
     <!-- Load required 3rd-party scripts -->
     <script src="./external/markdown-it.js"></script>
     <script src="./external/highlight/highlight.min.js"></script>
     <link href="./external/highlight/theme.css" rel="stylesheet" />
 
     <!-- Load application scripts -->
+    <script src="./chat-history.js"></script>
     <script src="./markdownit-setup.js"></script>
-    <script src="./main.js"></script>
+    <script src="./chat.js"></script>
     <script src="./persist.js"></script>
   </body>
 </html>
