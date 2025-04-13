@@ -1,4 +1,4 @@
-# Ollama HTML UI
+# Ollama Minimal HTML UI
 
 **_The simplest Ollama interface that actually works. Written in pure HTML/CSS for talking with Ollama._**
 
