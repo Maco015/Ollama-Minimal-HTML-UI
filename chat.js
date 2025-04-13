@@ -19,7 +19,6 @@ document
     window.addQuestion(prompt);
 
     try {
-      // Simulate a network request to an external API
       const res = await fetch(`${ipAddress}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -33,6 +32,7 @@ document
       if (!res.ok) throw new Error("Network response was not ok");
 
       const reader = res.body.getReader();
+      let accumulatedData = "";
 
       while (true) {
         const { done, value } = await reader.read();
@@ -40,17 +40,26 @@ document
         if (done) break;
 
         const decoder = new TextDecoder("utf-8");
-        const chunk = decoder.decode(value);
+        accumulatedData += decoder.decode(value);
 
         try {
-          const jsonChunk = JSON.parse(chunk);
-          answer += jsonChunk.message.content;
+          // Attempt to parse the accumulated data
+          const jsonChunks = accumulatedData.split("\n"); // Split by newline characters or another delimiter based on your response format
+
+          for (const chunk of jsonChunks) {
+            if (chunk.trim()) {
+              // Ignore empty chunks
+              const jsonChunk = JSON.parse(chunk);
+              answer += jsonChunk.message.content;
+            }
+          }
+
+          accumulatedData = "";
         } catch (e) {
           console.error(e);
         }
 
         responseContainer.innerHTML = markdown.render(answer);
-        console.log(answer);
       }
     } catch (error) {
       console.error(error);
