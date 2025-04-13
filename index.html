@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Question Answering WebUI</title>
-    <link href="custom.css" rel="stylesheet" />
+    <link href="./custom.css" rel="stylesheet" />
   </head>
   <body>
     <h1>Ask a Question</h1>
@@ -22,8 +22,12 @@
 
     <pre id="response-container"></pre>
     <div id="error-container"></div>
+    <!-- Load required 3rd-party scripts -->
+    <script src="./external/dompurify.js"></script>
+    <script src="./external/marked.min.js"></script>
 
-    <script src="main.js"></script>
-    <script src="persist.js"></script>
+    <!-- Load application scripts -->
+    <script src="./main.js"></script>
+    <script src="./persist.js"></script>
   </body>
 </html>

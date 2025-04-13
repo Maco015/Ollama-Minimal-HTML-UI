@@ -32,10 +32,13 @@ document
         const decoder = new TextDecoder("utf-8");
         const chunk = decoder.decode(value);
 
-        const jsonChunk = JSON.parse(chunk);
-        answer += jsonChunk.response;
+        try {
+          const jsonChunk = JSON.parse(chunk);
+          answer += jsonChunk.response;
+        } catch (e) {}
 
-        responseContainer.innerHTML = answer;
+        responseContainer.innerHTML = DOMPurify.sanitize(marked.parse(answer));
+        console.log(answer);
       }
     } catch (error) {
       console.error(error);
