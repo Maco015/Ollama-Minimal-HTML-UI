@@ -8,6 +8,13 @@ Run this program by opening `index.html`. That's it! No special compilation or a
 
 ![The interface](./docs/interface.png)
 
+# Features
+
+- Syntax highlighting
+- All markdown is automatically sanitized and rendered as markdown
+- Message streams display
+- Custom IP address and model setting
+
 # Purpose
 
 I am sick of seeing a bunch of random interfaces that depend on a whole bunch of nonsense. I know I want something simple that works that I can trust. You're here, so you probably do too.
