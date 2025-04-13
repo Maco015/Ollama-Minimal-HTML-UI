@@ -9,10 +9,6 @@ document
     const responseContainer = document.getElementById("response-container");
     const errorContainer = document.getElementById("error-container");
 
-    // Save values to localStorage
-    localStorage.setItem("ipAddress", ipAddress);
-    localStorage.setItem("modelName", modelName);
-
     try {
       // Simulate a network request to an external API
       const res = await fetch(`${ipAddress}/api/generate`, {
