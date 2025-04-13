@@ -9,6 +9,10 @@
   <body>
     <h1>Ask a Question</h1>
     <main>
+      <div id="history"></div>
+      <div id="current-response" class="history assistant working"></div>
+
+      <div id="error-container"></div>
       <form id="question-form">
         <input type="text" id="ip-address" placeholder="Enter IP Address" />
         <input type="text" id="model-name" placeholder="Enter Model Name" />
@@ -20,10 +24,6 @@
         ></textarea>
         <button type="submit" id="submit-button">Submit</button>
       </form>
-      <div id="history"></div>
-      <div id="current-response" class="history assistant working"></div>
-
-      <div id="error-container"></div>
     </main>
 
     <!-- Load required 3rd-party scripts -->
