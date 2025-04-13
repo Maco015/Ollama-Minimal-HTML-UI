@@ -13,7 +13,7 @@
  */
 window.chat_history = [
   {
-    role: "system",
+    role: "user",
     content: `The current date is: ${new Date()} \n The user's browser useragent is: ${
       navigator.userAgent
     }`,
