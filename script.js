@@ -24,6 +24,7 @@ document
     const modelName = document.getElementById("model-name").value;
     const prompt = document.querySelector("#question-form textarea").value;
     const responseContainer = document.getElementById("response-container");
+    const errorContainer = document.getElementById("error-container");
 
     // Save values to localStorage
     localStorage.setItem("ipAddress", ipAddress);
@@ -57,6 +58,6 @@ document
       }
     } catch (error) {
       console.error(error);
-      responseContainer.innerText = "Error retrieving the answer.";
+      errorContainer.innerText = "Error retrieving the answer.";
     }
   });

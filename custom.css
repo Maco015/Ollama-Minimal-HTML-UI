@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+#question-form {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+#response-container {
+  margin-top: 20px;
+  font-size: 18px;
+}

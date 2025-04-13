@@ -4,35 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Question Answering WebUI</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-      }
-      #question-form {
-        display: flex;
-        flex-direction: column;
-      }
-      input,
-      textarea {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      button {
-        padding: 10px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #45a049;
-      }
-      #response-container {
-        margin-top: 20px;
-        font-size: 18px;
-      }
-    </style>
+    <link href="custom.css" rel="stylesheet" />
   </head>
   <body>
     <h1>Ask a Question</h1>
@@ -48,6 +20,7 @@
     </form>
 
     <div id="response-container"></div>
+    <div id="error-container"></div>
 
     <script src="script.js"></script>
   </body>
