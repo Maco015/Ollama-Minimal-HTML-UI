@@ -9,6 +9,8 @@ document
     const responseContainer = document.getElementById("response-container");
     const errorContainer = document.getElementById("error-container");
 
+    errorContainer.innerText = null;
+
     try {
       // Simulate a network request to an external API
       const res = await fetch(`${ipAddress}/api/generate`, {
@@ -37,6 +39,6 @@ document
       }
     } catch (error) {
       console.error(error);
-      errorContainer.innerText = "Error retrieving the answer.";
+      errorContainer.innerText = "Error while generating: " + error?.message;
     }
   });
