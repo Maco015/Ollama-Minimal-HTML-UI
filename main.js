@@ -8,8 +8,10 @@ document
     const prompt = document.querySelector("#question-form textarea").value;
     const responseContainer = document.getElementById("response-container");
     const errorContainer = document.getElementById("error-container");
+    const submitButton = document.getElementById("submit-button");
 
     errorContainer.innerText = null;
+    submitButton.disabled = true;
 
     try {
       // Simulate a network request to an external API
@@ -43,5 +45,7 @@ document
     } catch (error) {
       console.error(error);
       errorContainer.innerText = "Error while generating: " + error?.message;
+    } finally {
+      submitButton.disabled = false;
     }
   });

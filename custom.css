@@ -35,6 +35,8 @@ textarea {
   width: 100%;
   margin-bottom: 10px;
 }
+
+/* Default button style */
 button {
   padding: 10px;
   background-color: #4caf50;
@@ -45,6 +47,21 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+/* Disabled button style */
+button:disabled {
+  background-color: grey;
+  color: black;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Focused button style */
+button:focus {
+  outline: 2px solid #2196f3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
 #response-container {
   margin-top: 20px;
   font-size: 18px;
