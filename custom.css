@@ -22,6 +22,10 @@ main {
   background: #1e2024;
 }
 
+.working {
+  background: #111214;
+}
+
 code {
   background: rgb(47, 20, 82);
 }

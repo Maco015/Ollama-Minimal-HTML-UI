@@ -25,6 +25,7 @@ document
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           model: modelName,
+          date: Date.now(),
           messages: window.chat_history,
         }),
       });
@@ -44,7 +45,9 @@ document
         try {
           const jsonChunk = JSON.parse(chunk);
           answer += jsonChunk.message.content;
-        } catch (e) {}
+        } catch (e) {
+          console.error(e);
+        }
 
         responseContainer.innerHTML = markdown.render(answer);
         console.log(answer);
