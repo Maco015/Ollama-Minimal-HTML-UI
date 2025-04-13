@@ -4,6 +4,8 @@
 
 All code exists in a minimal amount of files so it is as auditable as possible. If you know JavaScript/HTML/CSS, you should be able to understand all code in this repository!
 
+![The interface](./docs/interface.png)
+
 ## Features
 
 - **Syntax Highlighting**: Automatically highlights syntax in code for better readability.
@@ -25,8 +27,6 @@ I am sick of seeing a bunch of random interfaces that depend on a whole bunch of
 Run this program by opening or hosting `index.html`.
 
 That's it! No special compilation or any of that garbage 🪽
-
-![The interface](./docs/interface.png)
 
 ## `/external/` Notes
 
