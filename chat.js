@@ -20,10 +20,13 @@ document
 
     try {
       // Simulate a network request to an external API
-      const res = await fetch(`${ipAddress}/api/generate`, {
+      const res = await fetch(`${ipAddress}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ model: modelName, prompt }),
+        body: JSON.stringify({
+          model: modelName,
+          messages: window.chat_history,
+        }),
       });
 
       if (!res.ok) throw new Error("Network response was not ok");
@@ -40,7 +43,7 @@ document
 
         try {
           const jsonChunk = JSON.parse(chunk);
-          answer += jsonChunk.response;
+          answer += jsonChunk.message.content;
         } catch (e) {}
 
         responseContainer.innerHTML = markdown.render(answer);

@@ -15,7 +15,7 @@ window.chat_history = [];
 const historyContainer = document.getElementById("history");
 
 window.addQuestion = (itemText) => {
-  window.chat_history.push(itemText);
+  window.chat_history.push({ role: "user", content: itemText });
   // Step 2: Create a new div element
   const newDiv = document.createElement("div");
   newDiv.classList.add("history", "user");
@@ -28,7 +28,7 @@ window.addQuestion = (itemText) => {
 };
 
 window.addResponse = (itemText) => {
-  window.chat_history.push(itemText);
+  window.chat_history.push({ role: "assistant", content: itemText });
   // Step 2: Create a new div element
   const newDiv = document.createElement("div");
   newDiv.classList.add("history", "assistant");
